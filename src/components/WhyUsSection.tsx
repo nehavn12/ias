@@ -26,11 +26,11 @@ const features = [
 
 const WhyUsSection: React.FC = () => {
   return (
-    <section className="py-20 relative">
+    <section className="py-20 relative" id="whyinternational">
       <div className="container mx-auto px-6">
         {/* Section Heading */}
-        <div className="text-center mb-12">
-         <p className="text-sm text-[#022169] uppercase flex justify-center font-bold mb-2.5">Why IAS <Image className=' ml-1'src='/about_icon.png' width={14} height={12} alt="abouticon"/></p>
+        <div className="text-center">
+         <p className="text-sm text-[#022169] uppercase flex justify-center font-bold mb-2.5 tracking-[1.5px]">Why IAS <Image className=' ml-1'src='/about_icon.png' width={14} height={12} alt="abouticon"/></p>
           <h2 className="font-bold text-5xl text-[#022169] leading-15">
             Why International App Services <br />
             <span className="text-5xl font-bold text-[#E4022B]">is awesome</span>

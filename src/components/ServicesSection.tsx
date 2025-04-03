@@ -43,13 +43,13 @@ const services = [
 
 const ServicesSection: React.FC = () => {
   return (
-    <section className="py-20">
+    <section className="py-20" id="service">
       <div className="container mx-auto bg-[#F3F9FF] rounded-2xl p-[84px]">
         {/* Section Heading */}
         <div className="text-left mb-12">
-           <p className="text-sm text-[#022169] uppercase flex font-bold mb-2.5">Our Services <Image className=' ml-1'src='/about_icon.png' width={14} height={12} alt="abouticon"/></p>
+           <p className="text-sm text-[#022169] uppercase flex font-bold mb-2.5 tracking-[1.5px]">Our Services <Image className=' ml-1'src='/about_icon.png' width={14} height={12} alt="abouticon"/></p>
           <h2 className="font-bold text-5xl text-[#022169]">
-            Indian Visa Consultant Services in <div className="text-5xl font-bold text-[#E4022B]">Australia</div>
+            Indian Visa Consultant Services in <span className="text-5xl font-bold text-[#E4022B]">Australia</span>
           </h2>
         </div>
 
