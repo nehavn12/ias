@@ -22,8 +22,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-       <body className={`${jakarta.className} text-[16px]`}>
+    <html 
+      lang="en" 
+      suppressHydrationWarning={true} 
+      data-lt-installed="true"
+    >
+      <body className={`${jakarta.className} text-[16px]`}>
         <Header/>
         {children}
         <Footer/>

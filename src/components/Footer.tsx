@@ -12,8 +12,7 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               <Image src='/logo-top.png' width={123} height={46} alt="footerlogo"></Image>
             </div>
-            <p className="text-white text-[16px] mt-3 leading-relaxed mb-8">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+            <p className="text-white text-[16px] mt-3 leading-relaxed mb-8">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text.
             </p>
             {/* Social Icons */}
             <div className="flex gap-4 mt-4 text-white">

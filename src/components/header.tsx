@@ -14,7 +14,7 @@ const Header = () => {
         
         {/* ✅ Logo Section (Grid 2/12) */}
         <div className="col-span-2 flex items-center">
-          <img src="/logo-top.png" alt="Logo" />
+          <Image src='/logo-top.png' width={123} height={46} alt="footerlogo"></Image>
         </div>
 
         {/* ✅ Desktop Navigation (Grid 10/12) */}

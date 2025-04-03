@@ -119,7 +119,7 @@ const BlogSection = () => {
           }}
         >
           {blogPosts.map((post) => (
-            <SwiperSlide key={post.id}>
+            <SwiperSlide key={post.id } className="py-10">
               <div className={`bg-white shadow-[0_4px_10px_rgba(0,0,0,0.3)] rounded-2xl overflow-hidden h-full ${post.featured ? 'border border-[#E4022B]' : ''}`}>
                 <div className="relative h-60">
                   <Image
