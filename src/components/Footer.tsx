@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -9,10 +10,10 @@ export default function Footer() {
           {/* Logo & Description */}
           <div>
             <div className="flex items-center gap-2">
-              <img src="/logo-top.png" alt="Logo"/>
+              <Image src='/logo-top.png' width={123} height={46} alt="footerlogo"></Image>
             </div>
             <p className="text-white text-[16px] mt-3 leading-relaxed mb-8">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
             </p>
             {/* Social Icons */}
             <div className="flex gap-4 mt-4 text-white">

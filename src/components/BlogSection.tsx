@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import type { Swiper as SwiperType } from 'swiper';
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
