@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import type { Swiper as SwiperType } from 'swiper';
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
@@ -45,8 +46,8 @@ const blogPosts = [
 ];
 
 const BlogSection = () => {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const prevRef = useRef<HTMLButtonElement>(null);
+  const nextRef = useRef<HTMLButtonElement>(null);
 
   return (
     <section className="py-20 bg-white" id="blog">
@@ -106,12 +107,20 @@ const BlogSection = () => {
             },
           }}
           onInit={(swiper) => {
-            // Use type assertion to tell TypeScript these properties exist
-            const swiperInstance = swiper as any;
-            swiperInstance.params.navigation.prevEl = prevRef.current;
-            swiperInstance.params.navigation.nextEl = nextRef.current;
-            swiperInstance.navigation.init();
-            swiperInstance.navigation.update();
+            // Use a proper type cast without 'any'
+            const swiperInstance = swiper as unknown as SwiperType;
+            
+            if (prevRef.current && nextRef.current) {
+              // Set the navigation elements safely
+              Object.assign(swiperInstance.params.navigation || {}, {
+                prevEl: prevRef.current,
+                nextEl: nextRef.current,
+              });
+              
+              // Initialize and update navigation
+              swiperInstance.navigation.init();
+              swiperInstance.navigation.update();
+            }
           }}
           navigation={{
             prevEl: prevRef.current,
@@ -119,7 +128,7 @@ const BlogSection = () => {
           }}
         >
           {blogPosts.map((post) => (
-            <SwiperSlide key={post.id } className="py-10">
+            <SwiperSlide key={post.id} className="py-10">
               <div className={`bg-white shadow-[0_4px_10px_rgba(0,0,0,0.3)] rounded-2xl overflow-hidden h-full ${post.featured ? 'border border-[#E4022B]' : ''}`}>
                 <div className="relative h-60">
                   <Image

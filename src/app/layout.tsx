@@ -27,7 +27,11 @@ export default function RootLayout({
       suppressHydrationWarning={true} 
       data-lt-installed="true"
     >
-      <body className={`${jakarta.className} text-[16px]`}>
+     <body 
+  className={`${jakarta.className} text-[16px]`}
+  data-new-gr-c-s-check-loaded="14.1229.0" 
+  data-gr-ext-installed=""
+>
         <Header/>
         {children}
         <Footer/>
