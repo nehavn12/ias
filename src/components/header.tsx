@@ -21,7 +21,7 @@ const Header = () => {
         <nav className="hidden md:flex col-span-10 justify-end items-baseline">
           <ul className="flex gap-x-15 text-[16px] font-['Plus_Jakarta_Sans'] tracking-wide font-normal items-baseline">
             <li><Link href="/" className="hover:underline">Home</Link></li>
-            <li><Link href="#" className="hover:underline">About Us</Link></li>
+            <li><Link href="/aboutus" className="hover:underline">About Us</Link></li>
 
             {/* ✅ Dropdown for Services */}
             <li className="relative">
