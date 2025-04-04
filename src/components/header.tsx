@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FiMenu, FiX } from "react-icons/fi";
+import Home from "@/app/page";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,9 @@ const Header = () => {
         
         {/* ✅ Logo Section (Grid 2/12) */}
         <div className="col-span-2 flex items-center">
-          <Image src='/logo-top.png' width={123} height={46} alt="footerlogo"></Image>
+        <Link href="/">
+          <Image src='/logo-top.png' width={123} height={46} alt="footerlogo" />
+        </Link>
         </div>
 
         {/* ✅ Desktop Navigation (Grid 10/12) */}

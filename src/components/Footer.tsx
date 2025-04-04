@@ -4,13 +4,15 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#00142E] text-white py-[80px]">
-      <div className="container mx-auto px-6 lg:px-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    <footer className="bg-[#00142E] text-white py-[50px]">
+      <div className="max-w-[1500px] mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {/* Logo & Description */}
           <div>
             <div className="flex items-center gap-2">
-              <Image src='/logo-top.png' width={123} height={46} alt="footerlogo"></Image>
+            <Link href="/">
+              <Image src='/logo-top.png' width={123} height={46} alt="footerlogo" />
+            </Link>
             </div>
             <p className="text-white text-[16px] mt-3 leading-relaxed mb-8">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text.
             </p>
@@ -40,7 +42,7 @@ export default function Footer() {
           {/* Services */}
           <div className="md:col-span-2">
             <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 space-y-4">
               {[
                 "Indian Drivers License Verification (IDLV)",
                 "Indian Police Clearance Certificate (PCC)",
